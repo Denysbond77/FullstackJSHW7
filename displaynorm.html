@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Нормалізація стилів</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .box {
+        margin: 10px;
+        padding: 20px;
+        background-color: lightblue;
+        border: 2px solid blue;
+      }
+
+      .block {
+        display: block;
+      }
+
+      .inline {
+        display: inline;
+      }
+
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .flex .item {
+        background-color: lightgreen;
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid green;
+        flex: 1;
+        text-align: center;
+      }
+
+      .content-box {
+        box-sizing: content-box;
+        width: 200px;
+        padding: 20px;
+        border: 5px solid red;
+        background-color: pink;
+      }
+
+      .border-box {
+        box-sizing: border-box;
+        width: 200px;
+        padding: 20px;
+        border: 5px solid purple;
+        background-color: lavender;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Експерименти з display та box-sizing</h1>
+
+    <div class="box block">Це блоковий елемент (display: block).</div>
+
+    <span class="box inline">Це інлайновий елемент (display: inline).</span>
+
+    <div class="box flex">
+      <div class="item">Елемент 1</div>
+      <div class="item">Елемент 2</div>
+      <div class="item">Елемент 3</div>
+    </div>
+
+    <div class="box content-box">Це елемент з box-sizing: content-box.</div>
+    <div class="box border-box">Це елемент з box-sizing: border-box.</div>
+  </body>
+</html>

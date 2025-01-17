@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Експерименти з overflow</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        width: 300px;
+        height: 150px;
+        border: 2px solid black;
+        margin: 20px;
+        padding: 10px;
+        background-color: lightblue;
+      }
+
+      .overflow-visible {
+        overflow: visible;
+      }
+
+      .overflow-hidden {
+        overflow: hidden;
+      }
+
+      .overflow-scroll {
+        overflow: scroll;
+      }
+
+      .overflow-auto {
+        overflow: auto;
+      }
+
+      .content {
+        width: 500px;
+        height: 200px;
+        background-color: rgb(233, 70, 70);
+        padding: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container overflow-visible">
+      <p><strong>Overflow: visible</strong></p>
+      <div class="content">
+        Цей блок перевищує розміри контейнера, але він видимий.
+      </div>
+    </div>
+
+    <div class="container overflow-hidden">
+      <p><strong>Overflow: hidden</strong></p>
+      <div class="content">
+        Цей блок перевищує розміри контейнера, але він обрізається.
+      </div>
+    </div>
+
+    <div class="container overflow-scroll">
+      <p><strong>Overflow: scroll</strong></p>
+      <div class="content">
+        Цей блок перевищує розміри контейнера, і з'являються смуги прокрутки.
+      </div>
+    </div>
+
+    <div class="container overflow-auto">
+      <p><strong>Overflow: auto</strong></p>
+      <div class="content">
+        Цей блок перевищує розміри контейнера, і смуги прокрутки з'являються за
+        необхідності.
+      </div>
+    </div>
+  </body>
+</html>

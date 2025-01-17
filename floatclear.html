@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Практика з float та clear</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+
+      .container {
+        border: 2px solid black;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+
+      .box {
+        width: 150px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        line-height: 80px;
+      }
+
+      .red {
+        background-color: red;
+        float: left;
+      }
+
+      .blue {
+        background-color: blue;
+        float: left;
+      }
+
+      .green {
+        background-color: green;
+        float: right;
+      }
+
+      .clearfix {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Практика з float та clear</h1>
+
+    <div class="container">
+      <div class="box red">Червоний</div>
+      <div class="box blue">Синій</div>
+      <div class="box green">Зелений</div>
+
+      <p>
+        Це приклад тексту, який обтікає елементи з float. Текст автоматично
+        розташовується навколо цих елементів, якщо float заданий для них зліва
+        чи справа. Це приклад тексту, який обтікає елементи з float. Текст
+        автоматично розташовується навколо цих елементів, якщо float заданий для
+        них зліва чи справа. Це приклад тексту, який обтікає елементи з float.
+        Текст автоматично розташовується навколо цих елементів, якщо float
+        заданий для них зліва чи справа.
+      </p>
+
+      <div class="clearfix"></div>
+
+      <p>
+        Цей текст знаходиться під плаваючими елементами завдяки застосуванню
+        clear: both у div з класом <strong>clearfix</strong>.
+      </p>
+    </div>
+  </body>
+</html>

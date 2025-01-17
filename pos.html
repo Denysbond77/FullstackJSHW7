@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Позиціонування елементів</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        margin: 20px;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        margin: 10px 0;
+        padding: 10px;
+        background-color: lightblue;
+        border: 2px solid blue;
+        color: #333;
+      }
+
+      .static {
+        position: static;
+      }
+
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 20px;
+      }
+
+      .absolute-container {
+        position: relative;
+        height: 300px;
+        border: 2px dashed gray;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background-color: lightcoral;
+      }
+
+      .fixed {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: lightgreen;
+        z-index: 1000;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        background-color: lightyellow;
+        border: 2px solid orange;
+      }
+
+      .scroll-content {
+        height: 1500px;
+        background: linear-gradient(to bottom, #f4f4f4, #ddd);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Static (по умолчанию)</h2>
+      <div class="box static">Це елемент з позиціонуванням static.</div>
+
+      <h2>Relative</h2>
+      <div class="box relative">
+        Це елемент з позиціонуванням relative (зміщений на 20px).
+      </div>
+
+      <h2>Absolute</h2>
+      <div class="absolute-container">
+        <p>Контейнер з position: relative;</p>
+        <div class="box absolute">Абсолютне позиціонування</div>
+      </div>
+
+      <h2>Fixed</h2>
+      <div class="box fixed">
+        Це елемент з позиціонуванням fixed (завжди видно).
+      </div>
+
+      <h2>Sticky</h2>
+      <div class="box sticky">
+        Це елемент з позиціонуванням sticky (прилипає при скролі).
+      </div>
+    </div>
+
+    <div class="scroll-content">
+      <p>
+        Це тестовий контент для перевірки fixed та sticky елементів. Прокрутіть
+        сторінку вниз.
+      </p>
+    </div>
+  </body>
+</html>

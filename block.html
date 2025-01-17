@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Блокові та інлайнові елементи</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+      .block {
+        background-color: lightblue;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid blue;
+      }
+      .inline {
+        background-color: lightgreen;
+        padding: 5px;
+        border: 1px dashed green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Дослідження блокових та інлайнових елементів</h1>
+
+    <div class="block">
+      Це блоковий елемент. Він займає всю ширину контейнера.
+    </div>
+    <div class="block">
+      Ще один блоковий елемент. Вони розташовані вертикально один за одним.
+    </div>
+
+    <p>
+      Це приклад використання інлайнових елементів:
+      <span class="inline">інлайновий елемент 1</span>,
+      <span class="inline">інлайновий елемент 2</span>,
+      <span class="inline">інлайновий елемент 3</span>.
+    </p>
+  </body>
+</html>
